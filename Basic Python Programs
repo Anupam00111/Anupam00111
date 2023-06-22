@@ -1,0 +1,255 @@
+{
+  "nbformat": 4,
+  "nbformat_minor": 0,
+  "metadata": {
+    "colab": {
+      "provenance": [],
+      "authorship_tag": "ABX9TyNdfLxrApVEaEIrb+gnOkt/",
+      "include_colab_link": true
+    },
+    "kernelspec": {
+      "name": "python3",
+      "display_name": "Python 3"
+    },
+    "language_info": {
+      "name": "python"
+    }
+  },
+  "cells": [
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "view-in-github",
+        "colab_type": "text"
+      },
+      "source": [
+        "<a href=\"https://colab.research.google.com/github/Anupam00111/Anupam00111/blob/main/Basic%20Python%20Programs\" target=\"_parent\"><img src=\"https://colab.research.google.com/assets/colab-badge.svg\" alt=\"Open In Colab\"/></a>"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "Assignment 1\n",
+        "Q1:- check if a string is palindrome"
+      ],
+      "metadata": {
+        "id": "xit673vCfzmy"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#ANS:-\n",
+        "def Palindrome(j):\n",
+        "\treturn j == j[::-1]\n",
+        "\n",
+        "j = \"lol\"\n",
+        "ans = Palindrome(j)\n",
+        "\n",
+        "if ans:\n",
+        "\tprint(\"Yes palindrome\")\n",
+        "else:\n",
+        "\tprint(\"No not palindrome\")"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "i_7NuqpjgbDg",
+        "outputId": "6ea17cd2-4e68-4591-9be9-b81f82970694"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Yes palindrome\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "Q2:-\n",
+        "Take an input sentence from the user and find the occurrence of any of 'th','wh','ho' in the sentence."
+      ],
+      "metadata": {
+        "id": "fVGvXQ4Rg8s0"
+      }
+    },
+    {
+      "cell_type": "markdown",
+      "source": [],
+      "metadata": {
+        "id": "xNw4TEz4hRJ3"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#Ans:-\n",
+        "def find_occurrences(sentence):\n",
+        "    occurrences = 0\n",
+        "    keywords = ['th', 'wh', 'ho']\n",
+        "\n",
+        "    for keyword in keywords:\n",
+        "        occurrences += sentence.lower().count(keyword)\n",
+        "\n",
+        "    return occurrences\n",
+        "\n",
+        "user_sentence = input(\"Enter a sentence: \")\n",
+        "result = find_occurrences(user_sentence)\n",
+        "\n",
+        "print(\"Occurrences found:\", result)\n"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "cFqT8Q3gjEGM",
+        "outputId": "c90b2f45-b8e1-449a-9f4a-f3d89b8cd040"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Enter a sentence: anupam\n",
+            "Occurrences found: 0\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "ASSIGNMENT 2\n",
+        "Q NO:-01-->Write a Python program to check whether a list contains a sublist."
+      ],
+      "metadata": {
+        "id": "0nbYkJV3GTHp"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#ANS:-\n",
+        "def is_sublist(sublist, list):\n",
+        "    n = len(sublist)\n",
+        "    m = len(list)\n",
+        "\n",
+        "    for i in range(m - n + 1):\n",
+        "        if list[i:i+n] == sublist:\n",
+        "            return True\n",
+        "\n",
+        "    return False\n",
+        "my_list = [1, 2, 3, 4, 5, 6]\n",
+        "my_sublist = [3, 4, 5]\n",
+        "\n",
+        "result = is_sublist(my_sublist, my_list)\n",
+        "print(result)\n"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "Co8hniCTGgZ3",
+        "outputId": "597f22bd-b476-4ed5-8cb2-cd05064adfd8"
+      },
+      "execution_count": 6,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "True\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "Q NO 02:-\n",
+        "Write a Python program to get the frequency of the elements in a list."
+      ],
+      "metadata": {
+        "id": "cBTJVzU4LB1Q"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#ANS:-\n",
+        "str=input(\" Enter String \")\n",
+        "l=list(str)\n",
+        "freq=[l.count(ele) for ele in l]\n",
+        "print(freq)\n"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "pPKaTPRmLJke",
+        "outputId": "00cb7acf-ee33-4384-eaf9-c79e942cca21"
+      },
+      "execution_count": 5,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            " Enter String Anupam\n",
+            "[1, 1, 1, 1, 1, 1]\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "Q NO 03:- Write a Python program to find the second largest number in a list"
+      ],
+      "metadata": {
+        "id": "5ha2kRT_TFzU"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#Answer:-\n",
+        "a=[]\n",
+        "n=int(input(\"Enter number of elements:\"))\n",
+        "for i in range(1,n+1):\n",
+        "  b=int(input(\"Enter element:\"))\n",
+        "  a.append(b)\n",
+        "  a.sort()\n",
+        "print(\"Second largest element is:\",a[n-2])"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "GIb6DAkGUP6y",
+        "outputId": "043346fb-b226-46ec-f0e5-629498e78c40"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Enter number of elements:3\n",
+            "Enter element:25\n",
+            "Enter element:36\n",
+            "Enter element:29\n",
+            "Second largest element is: 29\n"
+          ]
+        }
+      ]
+    }
+  ]
+}
