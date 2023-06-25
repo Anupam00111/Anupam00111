@@ -1,6 +1,4 @@
 ### Hi there 👋
-Sure! Here's a suitable bio for you to post on GitHub:
-
 "Hello there! I'm Anupam Borah, a passionate and dedicated B.Tech student pursuing Computer Science Engineering at CIT Kokrajhar. With a strong foundation in the field, I also hold a diploma in CSE from Nalbari Polytechnic.
 
 During my academic journey, I have gained valuable industry experience through remote internships, totaling 2 years. These internships have allowed me to specialize in Information Technology and Content Moderation, honing my skills in areas such as data analysis, quality assurance, and effective communication.
